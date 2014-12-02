@@ -6,5 +6,15 @@
 	</head>
 	<body>
 		<b>Welcome to The Daily Planet News Paper</b>
+
+			<% news.forEach(function (articles) { %>
+				<div>
+					<%= articles.title %>
+				<div>
+					<%= articles.author %>
+				</div>
+			</div>
+
+		<% }) %>
 	</body>
 </html>

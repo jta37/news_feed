@@ -9,9 +9,11 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded());
 app.set("view engine", "ejs");
 
+	var articles = [{title: "Wanderer", author: "Yawgnimeh"}]
+
 
 app.get("/articles", function (req, res) {
-	res.render("articles/index.ejs");
+	res.render("articles/index.ejs", {news: articles});
 });
 
 app.get("/articles/new", function (req, res) {
@@ -21,16 +23,16 @@ app.get("/articles/new", function (req, res) {
 
 
 app.get("/", function (req, res) {
-	res.send("<b>Welcome WDI 15");
+	res.render("site/index.ejs");
 });
 
 
-app.get("/site/about", function (req, res) {
+app.get("/about", function (req, res) {
 	res.render("site/about.ejs");
 });
 
 
-app.get("/site/contact", function (req, res) {
+app.get("/contact", function (req, res) {
 	res.render("site/contact.ejs");
 });
 
