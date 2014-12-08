@@ -7,11 +7,11 @@
 	<body>
 		<b>Welcome to The Daily Planet News Paper</b>
 
-			<% news.forEach(function (articles) { %>
+			<% news.forEach(function (article) { %>
 				<div>
-					<%= articles.title %>
+					<a href="/articles/<%= article.id %>"><%= article.title %></a>
 				<div>
-					<%= articles.author %>
+					<%= article.summary %>
 				</div>
 			</div>
 

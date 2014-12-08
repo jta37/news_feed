@@ -9,7 +9,10 @@
 		<div>
 			<em> Would you like to submit a new article? </em>
 				<form method="post" action="/articles">
-					<input type="text" name="title">
+					<input type="text" name="article[title]">
+					<div>
+						<textarea name="article[summary]"></textarea>
+					</div>
 					<button>Submit</button>
 				</form>
 		</div>
